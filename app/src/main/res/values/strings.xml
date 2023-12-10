@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GeniArt</string>
+
+    //Headings
+    <string name="heading_one">Express your creativity</string>
+    <string name="heading_two">Mind to Matter Mastery</string>
+    <string name="heading_three">Having Trouble ?\nContact Us</string>
+
+    //Description
+    <string name="desc_one">Generate imaginative images with AI, weaving colors and shapes, a symphony of creativity, transforming thoughts into visual poetry.</string>
+    <string name="desc_two">Unleash the power of AI to transform your ideas into reality.</string>
+    <string name="desc_three">If you\'re experiencing issues, reach out to our support team for assistance. Contact us for prompt help.</string>
+
+</resources>

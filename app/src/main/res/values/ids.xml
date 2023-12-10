@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="widthTV" type="id" />
+    <item name="width" type="id" />
+    <item name="height" type="id" />
+    <item name="imageCountTV" type="id" />
+    <item name="imageCount" type="id" />
+    <item name="recycler" type="id" />
+    <item name="generate" type="id" />
+    <item name="heightTV" type="id" />
+</resources>

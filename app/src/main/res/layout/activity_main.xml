@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="370dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ai" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/promptLayout"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginLeft="25dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Create an image from text prompt"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:background="#FFFFDB59"
+        app:boxCornerRadiusTopStart="30dp"
+        app:boxCornerRadiusBottomEnd="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60sp"
+        android:hint="Enter Prompt"
+        android:id="@+id/promptLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:inputType="textMultiLine"
+            android:id="@+id/promptET"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Width"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="25sp"
+        android:layout_below="@id/promptLayout"
+        android:id="@+id/widthTV"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="1024"
+        android:progress="512"
+        android:layout_below="@id/widthTV"
+        android:progressTint="@color/black"
+        android:thumbTint="@color/black"
+        android:id="@+id/width"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5sp"
+        android:layout_below="@id/width"
+        android:layout_marginStart="15sp"
+        android:id="@+id/heightTV"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heightTV"
+        android:max="1024"
+        android:progress="512"
+        android:progressTint="@color/black"
+        android:thumbTint="@color/black"
+        android:id="@+id/height"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="5sp"
+        android:layout_below="@id/height"
+        android:text="Number of Images"
+        android:id="@+id/imageCountTV"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageCountTV"
+        android:id="@+id/imageCount"
+        android:max="10"
+        android:progressTint="@color/black"
+        android:thumbTint="@color/black"
+        android:progress="2"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:textAllCaps="false"
+        android:layout_below="@id/imageCount"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/generate"
+        android:text="Generate Now"
+        android:textSize="15dp"
+        android:backgroundTint="@color/black"
+        android:drawableLeft="@drawable/baseline_auto_awesome_24"
+        android:layout_marginTop="30sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler"
+        android:layout_below="@id/generate"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</RelativeLayout>
